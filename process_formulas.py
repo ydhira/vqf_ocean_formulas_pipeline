@@ -1,56 +1,14 @@
-Loudness_mu=2.5049e-01
-alphaRatio_mu=-2.6758e+00
-hammarbergIndex_mu=9.1562e+00
-slope0_500_mu=8.2642e-02
-slope500_1500_mu=1.9943e-02
-spectralFlux_mu=1.0016e-01
-mfcc1_mu=2.1031e+01
-mfcc2_mu=-2.0203e+01
-mfcc3_mu=1.0336e+01
-mfcc4_mu=-9.1172e+00
-F0semitoneFrom27_5Hz_mu=8.1094e+00
-jitterLocal_mu=4.5738e-03
-shimmerLocaldB_mu= 2.9980e-01
-HNRdBACF_mu=1.4062e+00
-logRelF0_H1_H2_mu=2.5903e-01
-logRelF0_H1_A3_mu=4.7461e+00
-F1frequency_mu= 6.4250e+02
-F1bandwidth_mu=9.8800e+02
-F1amplitudeLogRelF0_mu=-1.4562e+02
-F2frequency_mu=1.4210e+03
-F2bandwidth_mu=8.6350e+02
-F2amplitudeLogRelF0_mu=-1.4762e+02
-F3frequency_mu=2.1780e+03
-F3bandwidth_mu=7.6550e+02
-F3amplitudeLogRelF0_mu=-1.4925e+02
+from get_hyperparams import get_hyperparameters
 
-Loudness_sigma=4.0520656e-01
-alphaRatio_sigma=7.5566044e+00
-hammarbergIndex_sigma=9.9376974e+00
-slope0_500_sigma=2.6963402e-02
-slope500_1500_sigma=3.4456372e-02
-spectralFlux_sigma=2.2770199e-01
-mfcc1_sigma=1.6510166e+01
-mfcc2_sigma=1.5998608e+01
-mfcc3_sigma=1.4597505e+01 
-mfcc4_sigma=1.2892332e+01
-F0semitoneFrom27_5Hz_sigma=1.3752241e+01
-jitterLocal_sigma= 1.5122188e-02
-shimmerLocaldB_sigma=6.4897507e-01
-HNRdBACF_sigma= 2.9334540e+00 
-logRelF0_H1_H2_sigma= 4.1907616e+00
-logRelF0_H1_A3_sigma=9.6122217e+00 
-F1frequency_sigma=3.5699408e+02
-F1bandwidth_sigma=5.1291235e+02
-F1amplitudeLogRelF0_sigma=8.8870285e+01
-F2frequency_sigma=   7.0985553e+02
-F2bandwidth_sigma=4.4298511e+02
-F2amplitudeLogRelF0_sigma=8.5651329e+01
-F3frequency_sigma=1.0818571e+03 
-F3bandwidth_sigma= 3.8407300e+02 
-F3amplitudeLogRelF0_sigma=8.3159859e+01
+def get_vqf(llfs, hyperparam_dataset):
+        Loudness_mu, alphaRatio_mu, hammarbergIndex_mu, slope0_500_mu, slope500_1500_mu, spectralFlux_mu, mfcc1_mu, mfcc2_mu, mfcc3_mu, mfcc4_mu, \
+        F0semitoneFrom27_5Hz_mu, jitterLocal_mu, shimmerLocaldB_mu, HNRdBACF_mu, logRelF0_H1_H2_mu, logRelF0_H1_A3_mu, F1frequency_mu, F1bandwidth_mu, F1amplitudeLogRelF0_mu, \
+        F2frequency_mu, F2bandwidth_mu, F2amplitudeLogRelF0_mu, F3frequency_mu, F3bandwidth_mu, F3amplitudeLogRelF0_mu, Loudness_sigma, alphaRatio_sigma, hammarbergIndex_sigma, \
+        slope0_500_sigma, slope500_1500_sigma, spectralFlux_sigma, mfcc1_sigma, mfcc2_sigma, mfcc3_sigma, mfcc4_sigma, F0semitoneFrom27_5Hz_sigma, jitterLocal_sigma, shimmerLocaldB_sigma, \
+        HNRdBACF_sigma, logRelF0_H1_H2_sigma, logRelF0_H1_A3_sigma, F1frequency_sigma, F1bandwidth_sigma, F1amplitudeLogRelF0_sigma, F2frequency_sigma, F2bandwidth_sigma, F2amplitudeLogRelF0_sigma, \
+        F3frequency_sigma, F3bandwidth_sigma, F3amplitudeLogRelF0_sigma = get_hyperparameters(hyperparam_dataset)
 
-def get_vqf(llfs):
+
         Loudness_val=llfs[0]
         alphaRatio_val=llfs[1]
         hammarbergIndex_val=llfs[2]
@@ -800,18 +758,3 @@ def get_ocean(vqfs):
                 res[c] = v
             
         return res
-# import matplotlib.pyplot as plt 
-
-# rows = [ 'Loudness', 'alphaRatio','hammarbergIndex','slope0_500','slope500_1500','spectralFlux','mfcc1','mfcc2','mfcc3','mfcc4',\
-#         'F0semitoneFrom27_5Hz','jitterLocal','shimmerLocaldB','HNRdBACF','logRelF0_H1_H2','logRelF0_H1_A3','F1frequency','F1bandwidth',\
-#         'F1amplitudeLogRelF0','F2frequency','F2bandwidth' ,'F2amplitudeLogRelF0','F3frequency' ,'F3bandwidth','F3amplitudeLogRelF0'] # llf       
-# columns=['Coveredness' ,'Aphonicity' ,'Biphonicity','Breathiness','Creakiness','Diplophonicity','Flutter','Glottalization','Hoarseness','Roughness',\
-#         'Nasality','Jitter','Pressed','Pulsed','Resonant','Shimmer','Strained','Strohbassness','Tremor','Twanginess','Ventricular','Wobble','Yawniness','Loudness']
-
-# yaxis = [Coveredness ,Aphonicity ,Biphonicity,Breathiness,Creakiness,Diplophonicity,Flutter,Glottalization,Hoarseness,Roughness,\
-#         Nasality,Jitter,Pressed,Pulsed,Resonant,Shimmer,Strained,Strohbassness,Tremor,Twanginess,Ventricular,Wobble,Yawniness,Loudness]
-
-# plt.figure(figsize=(20,5))
-# plt.plot(columns, yaxis, 's')
-# plt.xticks(rotation=90)
-# plt.savefig('formula_plot.png')
