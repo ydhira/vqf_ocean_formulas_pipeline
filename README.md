@@ -25,8 +25,31 @@ We represent personality using the OCEAN traits. These traits are Openness, Cons
 Run 
 python main.py <audiopath>
 
+### Experiments - (RQ1)
+All the Google Forms containing speech samples for the voice qualities and the questions asked can be found here: [https://drive.google.com/drive/folders/1pdW0qI-131SinruIbmbwwRBe5R9BE4iq](https://drive.google.com/drive/folders/1pdW0qI-131SinruIbmbwwRBe5R9BE4iq).
 
+The description of each form can be found in the Table below: 
 
+| Google Form Name  | Description |
+| :---------------- | :------ | 
+| Voice Quality - Creakiness         |  random - 5 sec speech sample   | 
+| Voice Quality - Creakiness (1st)   |   first half - 5 sec speech sample    | 
+| Voice Quality - Creakiness (2nd)   |   second half - 5 sec speech sample   |
+| Voice Quality - Creakiness (Long)  |  10 sec speech sample   | 
+| Voice Quality - Breathiness        |  random 5 sec speech sample   | 
+| Voice Quality - Breathiness (1st)  |  first half - 5 sec speech sample   | 
+| Voice Quality - Breathiness (2nd)  |  second half - 5 sec speech sample   |
+| Voice Quality - Breathiness (Long) |  10 sec speech sample   | 
+| Voice Quality - Nasal              |  random - 5 sec speech sample   | 
+| Voice Quality - Nasal (1st)        |  first half - 5 sec speech sample   | 
+| Voice Quality - Nasal (2nd)        |  second half - 5 sec speech sample   |
+| Voice Quality - Nasal (Long)       |  10 sec speech sample   | 
+| Voice Quality - Coveredness        |  random - 5 sec speech sample   | 
+| Voice Quality - Twanginess         |  random - 5 sec speech sample   | 
+| Voice Quality - Glottalization     |  random - 5 sec speech sample   | 
+| Voice Quality - Pulsed             |  random - 5 sec speech sample   | 
+| Voice Quality - Hoarseness         |  random - 5 sec speech sample   | 
+| Voice Quality - Strohbassness      |  random - 5 sec speech sample   | 
 ## Contact
 
 Hira Dhamyal - hyd@cs.cmu.edu
