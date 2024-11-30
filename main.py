@@ -99,8 +99,8 @@ if __name__ == '__main__':
     ocean_traits = ['Openness','Conscientiousness','Extraversion','Agreeableness','Neuroticism']
     ##
     audio_path = sys.argv[1] 
-    vqfs_list, ocean_dict = main(audio_path)
+    vqfs_list, ocean_list = main(audio_path)
     print("voice quality: ")
     print(vqfs_list)
     print("OCEAN Traits: ")
-    print(ocean_dict)
+    print(ocean_list)
